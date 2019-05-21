@@ -1,0 +1,16 @@
+context:
+  title: Game of Clones
+  subtitle: An Unreal World Experiment from Advance Party at The Royals
+  sections:
+    - title: What's it all about?
+      pars:
+        - Recently, we've been spending some time tinkering with neural networks. About a week before the Australian Federal election, we noticed that one of our models was behaving like a politician on the campaign trial, stubbornly churning out whatever it wanted to, regardless of what we were asking it.
+        - Which led a to a burst of absurd inspiration
+    - blockquote: What would happen if we could build two neural networks, one for Bill Shorten and one for Scott Morrison, and engaged them in a conversation?
+    - pars:
+        - Would they make any sense? Would the models pick up on specific themes, phrases and or ideas from each leader? After all, so much of political campaigning is about hammering away at the same themes and songs over and over again -- perfect fodder for neural networks which thrive on pattern recognition and imitation.
+        - So we trained Cyberbill and RoboScoMo on more than 120,000 words of transcripts from speeches and interviews with their human counterparts. The results aren't perfect, but you can already see pet themes and phrases starting to pop up for both leaders.
+    - title: Neural networks
+      subtitle: What are they and how do they work?
+      pars:
+        - In a nutshell, it's a type of programming architecture designed to be exceptionally good at finding patterns in data, and generating predictions or analysis based on those patterns. Check out the neural networks page.

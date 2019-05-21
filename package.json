@@ -1,0 +1,31 @@
+{
+  "name": "advance-party-design-system",
+  "version": "0.0.1",
+  "description": "Basic design system for Advance Party projects.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "concurrently 'npm run watch:fractal' 'npm run watch:sass'",
+    "watch:fractal": "fractal start --sync",
+    "watch:sass": "node-sass src/scss/index.scss src/static/css/styles.css --watch",
+    "build": "npm run clean && npm run generate && npm run copyfiles",
+    "generate": "npm run generate:sass && npm run generate:fractal",
+    "generate:sass": "node-sass src/scss/index.scss src/static/css/styles.css",
+    "generate:fractal": "fractal build",
+    "copyfiles": "npm run copy:sass",
+    "copy:sass": "cp -R src/scss/ dist/scss",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [],
+  "author": "Gil Fewster <gil@theroyals.com.au> (http://www.advanceparty.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "@frctl/fractal": "^1.1.7",
+    "@frctl/nunjucks": "^2.0.1",
+    "nunjucks": "^3.2.0"
+  }
+}

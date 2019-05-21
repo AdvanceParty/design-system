@@ -1,0 +1,6 @@
+{% set items = items | default(content.li) %}
+<ul>
+  {% for item in items %}
+    <li>{{ item.content | default(item) }}</li>
+  {% endfor %}
+</ul>
