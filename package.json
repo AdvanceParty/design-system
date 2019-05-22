@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "concurrently 'npm run watch:fractal' 'npm run watch:sass'",
-    "watch:fractal": "fractal start --sync",
+    "watch:fractal": "fractal start --sync --watch",
     "watch:sass": "node-sass src/scss/index.scss src/static/css/styles.css --watch",
     "build": "npm run clean && npm run generate && npm run copyfiles",
     "generate": "npm run generate:sass && npm run generate:fractal",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@frctl/fractal": "^1.1.7",
+    "@frctl/mandelbrot": "^1.2.1",
     "@frctl/nunjucks": "^2.0.1",
     "nunjucks": "^3.2.0"
   }
