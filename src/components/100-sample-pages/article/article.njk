@@ -1,16 +1,10 @@
-{% render '@page-title', {text: title} %}
-{% render '@page-subtitle', {text: subtitle} %}
+{%- render '@heading--page-title', {content: title}, merge=true -%}
+{%- render '@heading--page-subtitle', {content: subtitle}, merge=true -%}
+
 {% for section in sections %}
-  {% if section.title %}
-    {% render '@section-title', {text: section.title} %}
-  {% endif %}
-  {% if section.subtitle %}
-    {% render '@section-subtitle', {text: section.subtitle} %}
-  {% endif %}
-  {% if section.blockquote %}
-    {% render '@blockquote', {text: section.blockquote} %}
-  {% endif %}
-  {% for par in section.pars %}
-    {% render '@body-text', {text: par} %}
+  <section>
+  {% for item in section.section %}
+    {%- render '@'+item.type, {content: item.value}, merge=true -%}
   {% endfor %}
+  </section>
 {% endfor %}

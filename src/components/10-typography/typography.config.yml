@@ -1,8 +1,0 @@
-context:
-  content:
-    li:
-      - First item in a list
-      - Second item in a list
-      - Another item in a list
-      - A rather long item in a list, which keeps on going a bit and takes up rather a large amount of space compared to the other list items around it.
-      - Last item in a list

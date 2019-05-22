@@ -1,0 +1,5 @@
+<{{type}} {{variant|asModifier|safe}}>
+  {% for item in items %}
+    {%- render '@li', item, merge=true -%}
+  {% endfor %}
+</{{type}}>

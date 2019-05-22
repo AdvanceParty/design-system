@@ -1,4 +1,0 @@
-{% set items = items | default(content.li) %}
-<ol>
-  {% for item in items %}<li>{{ item.content | default(item) }}</li>{% endfor %}
-</ol>

@@ -1,16 +1,24 @@
 'use strict';
 const path = require('path');
-const fractal = (module.exports = require('@frctl/fractal').create());
 const config = require('./settings');
+const filters = require('./filters');
+const fractal = (module.exports = require('@frctl/fractal').create());
+const engine = require('@frctl/nunjucks')({ filters });
 
-// Project metadata
+// Project settings
 fractal.set('project.title', config.project.title);
 fractal.set('project.version', config.project.version);
 fractal.set('project.author', config.project.author);
 
 // template engine
-fractal.components.engine('@frctl/nunjucks');
+fractal.components.engine(engine);
 fractal.components.set('ext', '.njk');
+
+// docs
+fractal.docs.set('default.status', config.docs.defaultStatus);
+
+// components
+fractal.components.set('default.status', config.components.defaultStatus);
 
 // Paths
 fractal.components.set('path', path.join(__dirname, config.paths.components));
