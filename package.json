@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "concurrently 'npm run watch:fractal' 'npm run watch:sass'",
+    "dev": "npm run build && concurrently 'npm run watch:fractal' 'npm run watch:sass'",
     "watch:fractal": "fractal start --sync --watch",
-    "watch:sass": "node-sass src/scss/index.scss src/static/css/styles.css --watch",
+    "watch:sass": "node-sass src/scss/ -wo src/static/css/",
     "build": "npm run clean && npm run generate && npm run copyfiles",
     "generate": "npm run generate:sass && npm run generate:fractal",
-    "generate:sass": "node-sass src/scss/index.scss src/static/css/styles.css",
+    "generate:sass": "node-sass src/scss/ -o src/static/css/",
     "generate:fractal": "fractal build",
     "copyfiles": "npm run copy:sass",
     "copy:sass": "cp -R src/scss/ dist/scss",
@@ -27,6 +27,7 @@
     "@frctl/fractal": "^1.1.7",
     "@frctl/mandelbrot": "^1.2.1",
     "@frctl/nunjucks": "^2.0.1",
-    "nunjucks": "^3.2.0"
+    "nunjucks": "^3.2.0",
+    "sassy-gridlover": "^6.0.5"
   }
 }

@@ -1,0 +1,65 @@
+html {
+  font-family: $body-font-family;
+  font-size: $one-rem;
+}
+
+body {
+  font-size: nth($font-sizes, 1);
+  @include min-width($scrn-md) {
+    font-size: nth($font-sizes, 2);
+  }
+  @include min-width($scrn-lg) {
+    font-size: nth($font-sizes, 3);
+  }
+  @include min-width($scrn-xl) {
+    font-size: nth($font-sizes, 4);
+  }
+
+  line-height: $line-height;
+}
+
+h1 {
+  font-size: 1em * $typography-scale * $typography-scale * $typography-scale * $typography-scale;
+  margin-top: $line-height * 0.25em;
+  margin-bottom: $line-height * 0.5em;
+}
+
+h2 {
+  font-size: 1em * $typography-scale * $typography-scale * $typography-scale;
+  margin-top: $line-height * 0.25em;
+  margin-bottom: $line-height * 0.5em;
+}
+
+h3 {
+  font-size: 1em * $typography-scale * $typography-scale;
+  margin-top: $line-height * 0.25em;
+  margin-bottom: $line-height * 0.5em;
+}
+
+h4 {
+  font-size: 1em * $typography-scale;
+  margin-top: $line-height * 0.25em;
+  margin-bottom: $line-height * 0.5em;
+}
+
+h5 {
+  font-size: 1em;
+  margin-top: $line-height * 0.25em;
+  margin-bottom: $line-height * 0.5em;
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-top: $line-height * 0.25em;
+  margin-bottom: $line-height * 0.75em;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+}

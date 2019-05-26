@@ -27,5 +27,7 @@ fractal.docs.set('path', path.join(__dirname, config.paths.docs));
 fractal.web.set('static.path', path.join(__dirname, config.paths.staticAssets));
 fractal.web.set('builder.dest', path.join(__dirname, config.paths.build));
 
+console.log('static path: ' + path.join(__dirname, config.paths.staticAssets));
+
 // theme the fractaljs interface
 fractal.web.theme(customTheme);

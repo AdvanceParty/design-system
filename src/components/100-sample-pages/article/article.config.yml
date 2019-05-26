@@ -3,8 +3,6 @@ context:
   subtitle: An Unreal World Experiment from Advance Party at The Royals
   sections:
     - section:
-        - type: 'heading--section-title'
-          value: What's it all about?
         - type: paragraph
           value: Recently, we've been spending some time tinkering with neural networks. About a week before the Australian Federal election, we noticed that one of our models was behaving like a politician on the campaign trial, stubbornly churning out whatever it wanted to, regardless of what we were asking it.
         - type: paragraph
