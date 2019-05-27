@@ -11,7 +11,8 @@
 }
 
 @mixin text-level($level: 0) {
-  $space-multiplier: ceil($level / 3);
-  font-size: 1em * pow($typography-scale, $level);
-  line-height: $v-rhythm * $space-multiplier;
+  $space-multiplier: round($level / 2.5);
+  $fontsize: 1em * pow($typography-scale, $level);
+  font-size: $fontsize;
+  line-height: v-rhythm() * $space-multiplier;
 }

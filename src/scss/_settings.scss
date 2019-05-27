@@ -5,37 +5,31 @@ $scrn-lg: 992px;
 $scrn-xl: 1200px;
 $scrn-xxl: 1200px;
 
-$typography-scale: 1.15;
-$root-font-sizes: (1.6, 1.6, 1.6, 1.6);
-$v-rhythm: 1.778rem;
-
-:root {
-  --font-size: 18px; // #{nth($root-font-sizes, 1) * 1rem};
-}
-
-// @include min-width($scrn-md) {
-//   :root {
-//     --font-size: #{nth($root-font-sizes, 2) * 1rem};
-//     --line-height: #{nth($root-font-sizes, 2) * $root-line-height * 1rem};
-//   }
-// }
+$root-line-height: 1.55;
 
 // Heading sizes, using typography scale as a ratio
-$heading-scale: (6, 3, 2, 1, 0, 0);
+$typography-scale: 1.15;
+$heading-sizes: (6, 3, 2, 1, 0, 0);
 
-$h1-scale: 6;
-$h2-scale: 3;
-$h3-scale: 2;
-$h4-scale: 1;
-$h5-scale: 0;
-$h6-scale: 0;
+$tabstop: 0.5; // for indented content like blockquotes and lists
+$debug: true; // switch on line-height guides and other helper tools
 
-// for indented content like blockquotes and lists
-$tabstop: 0.5;
-
-// et debug to true to switch on line-height guieds and other helper tools
-$debug: true;
-
-// fonts
-$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+// font family
+$font-stack-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
   "Helvetica Neue", sans-serif;
+
+:root {
+  font-size: 14px;
+}
+
+@include min-width($scrn-sm) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@include min-width($scrn-lg) {
+  :root {
+    font-size: 16px;
+  }
+}

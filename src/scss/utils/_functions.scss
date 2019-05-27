@@ -39,6 +39,10 @@
   @return $value;
 }
 
-@function vspace($level: 1) {
-  @return $v-rhythm * $level;
+@function v-rhythm() {
+  @return round(1rem * $root-line-height);
+}
+
+@function v-space($level: 1) {
+  @return v-rhythm() * $level;
 }

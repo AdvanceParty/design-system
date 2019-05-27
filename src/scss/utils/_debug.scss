@@ -5,7 +5,7 @@
       #ccccff,
       #ccccff 1px,
       transparent 1px,
-      transparent $v-rhythm
+      transparent v-rhythm()
     );
     background-size: 100% 100%;
     background-position: 0 0;

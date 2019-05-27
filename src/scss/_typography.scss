@@ -1,16 +1,16 @@
 html {
-  font-family: $body-font-family;
-  font-size: var(--font-size);
+  font-family: $font-stack-body;
 }
 
 body {
-  line-height: $v-rhythm;
+  line-height: v-rhythm();
 }
 
 @for $h-level from 1 through 6 {
   h#{$h-level} {
-    @include text-level(nth($heading-scale, $h-level));
-    margin-bottom: $v-rhythm;
+    // @include text-level(nth($heading-sizes, $h-level));
+    @include text-level(7 - $h-level);
+    margin-bottom: v-space();
   }
 }
 
@@ -27,7 +27,7 @@ ol,
 pre,
 table,
 blockquote {
-  margin-bottom: $v-rhythm;
+  margin-bottom: v-space();
 }
 
 blockquote {
@@ -36,7 +36,7 @@ blockquote {
     @include indent(3);
   }
 
-  @include text-level(2);
+  @include text-level(3);
   font-style: italic;
 }
 
