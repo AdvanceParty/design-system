@@ -10,7 +10,7 @@ The dist folder also includes compiled css as a build-free alternate to the sass
 
 This project uses [FractalJS](https://fractal.build) to generate a set of HTML pages which demo the included styles and how to implement them.
 
-- Use `npm run build` to generate the styleguide into the `/dist` directory.
+- Use `npm run build` to generate the styleguide into the `/styleguide` directory.
 - Use `npm run start` to generate the style and start a local webserver and serve the styleguide on http://localhost:3000.
 
 ## Using the CSS
