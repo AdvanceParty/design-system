@@ -3,3 +3,15 @@
     @content;
   }
 }
+
+@mixin indent($stops: 1) {
+  $value: $tabstop * $stops;
+  margin-left: 1em * $value;
+  margin-right: 1em * $value;
+}
+
+@mixin text-level($level: 0) {
+  $space-multiplier: ceil($level / 3);
+  font-size: 1em * pow($typography-scale, $level);
+  line-height: $v-rhythm * $space-multiplier;
+}

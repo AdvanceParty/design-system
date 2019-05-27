@@ -1,51 +1,24 @@
 html {
   font-family: $body-font-family;
-  font-size: $one-rem;
+  font-size: var(--font-size);
 }
 
 body {
-  font-size: nth($font-sizes, 1);
-  @include min-width($scrn-md) {
-    font-size: nth($font-sizes, 2);
+  line-height: $v-rhythm;
+}
+
+@for $h-level from 1 through 6 {
+  h#{$h-level} {
+    @include text-level(nth($heading-scale, $h-level));
+    margin-bottom: $v-rhythm;
   }
-  @include min-width($scrn-lg) {
-    font-size: nth($font-sizes, 3);
-  }
-  @include min-width($scrn-xl) {
-    font-size: nth($font-sizes, 4);
-  }
-
-  line-height: $line-height;
-}
-
-h1 {
-  font-size: 1em * $typography-scale * $typography-scale * $typography-scale * $typography-scale;
-  margin-top: $line-height * 0.25em;
-  margin-bottom: $line-height * 0.5em;
-}
-
-h2 {
-  font-size: 1em * $typography-scale * $typography-scale * $typography-scale;
-  margin-top: $line-height * 0.25em;
-  margin-bottom: $line-height * 0.5em;
-}
-
-h3 {
-  font-size: 1em * $typography-scale * $typography-scale;
-  margin-top: $line-height * 0.25em;
-  margin-bottom: $line-height * 0.5em;
-}
-
-h4 {
-  font-size: 1em * $typography-scale;
-  margin-top: $line-height * 0.25em;
-  margin-bottom: $line-height * 0.5em;
 }
 
 h5 {
-  font-size: 1em;
-  margin-top: $line-height * 0.25em;
-  margin-bottom: $line-height * 0.5em;
+  font-weight: bold;
+}
+h6 {
+  font-style: italic;
 }
 
 p,
@@ -54,12 +27,39 @@ ol,
 pre,
 table,
 blockquote {
-  margin-top: $line-height * 0.25em;
-  margin-bottom: $line-height * 0.75em;
+  margin-bottom: $v-rhythm;
 }
 
-ul ul,
-ol ol,
-ul ol,
-ol ul {
+blockquote {
+  @include indent(1);
+  @include min-width($scrn-md) {
+    @include indent(3);
+  }
+
+  @include text-level(2);
+  font-style: italic;
+}
+
+ol,
+ul {
+  list-style-position: outside;
+
+  @include indent(1);
+  @include min-width($scrn-md) {
+    @include indent(3);
+  }
+}
+
+ul {
+  list-style: disc;
+}
+
+li {
+  @include indent(1);
+  @include min-width($scrn-md) {
+    @include indent(3);
+  }
+
+  margin-top: 0;
+  margin-bottom: 0;
 }

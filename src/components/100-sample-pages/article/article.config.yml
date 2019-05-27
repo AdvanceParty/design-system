@@ -1,14 +1,26 @@
 context:
-  title: Game of Clones
-  subtitle: An Unreal World Experiment from Advance Party at The Royals
+  # title: Game of Clones
+  # subtitle: An Unreal World Experiment from Advance Party at The Royals
   sections:
     - section:
+        - type: paragraph
+          value: Recently, we've been spending some time tinkering with neural networks. About a week before the Australian Federal election, we noticed that one of our models was behaving like a politician on the campaign trial, stubbornly churning out whatever it wanted to, regardless of what we were asking it. About a week before the Australian Federal election, we noticed that one of our models was behaving like a politician on the campaign trial, stubbornly churning out whatever it wanted to, regardless of what we were asking it. About a week before the Australian Federal election, we noticed that one of our models was behaving like a politician on the campaign trial, stubbornly churning out whatever it wanted to, regardless of what we were asking it.
+        - type: paragraph
+          value: Which led a to a burst of absurd inspiration.
+        - type: paragraph
+          value: Recently, we've been spending some time tinkering with neural networks. About a week before the Australian Federal election, we noticed that one of our models was behaving like a politician on the campaign trial, stubbornly churning out whatever it wanted to, regardless of what we were asking it.
+        - type: paragraph
+          value: Which led a to a burst of absurd inspiration.
+        - type: paragraph
+          value: Would they make any sense? Would the models pick up on specific themes, phrases and or ideas from each leader? After all, so much of political campaigning is about hammering away at the same themes and songs over and over again -- perfect fodder for neural networks which thrive on pattern recognition and imitation.
         - type: paragraph
           value: Recently, we've been spending some time tinkering with neural networks. About a week before the Australian Federal election, we noticed that one of our models was behaving like a politician on the campaign trial, stubbornly churning out whatever it wanted to, regardless of what we were asking it.
         - type: paragraph
           value: Which led a to a burst of absurd inspiration.
         - type: callout
           value: What would happen if we could build two neural networks, one for Bill Shorten and one for Scott Morrison, and engaged them in a conversation?
+        - type: list
+          value: hello
         - type: paragraph
           value: Would they make any sense? Would the models pick up on specific themes, phrases and or ideas from each leader? After all, so much of political campaigning is about hammering away at the same themes and songs over and over again -- perfect fodder for neural networks which thrive on pattern recognition and imitation.
         - type: paragraph

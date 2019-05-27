@@ -1,5 +1,10 @@
-{%- render '@heading--page-title', {content: title}, merge=true -%}
-{%- render '@heading--page-subtitle', {content: subtitle}, merge=true -%}
+{% if title %}
+  {%- render '@heading--page-title', {content: title}, merge=true -%}
+{% endif %}
+
+{% if subtitle %}
+  {%- render '@heading--page-subtitle', {content: subtitle}, merge=true -%}
+{% endif %}
 
 {% for section in sections %}
   <section>

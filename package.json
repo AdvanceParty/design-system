@@ -14,7 +14,7 @@
     "generate:fractal": "fractal build",
     "copyfiles": "npm run copy:sass",
     "copy:sass": "cp -R src/scss/ dist/scss",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist src/static/css"
   },
   "keywords": [],
   "author": "Gil Fewster <gil@theroyals.com.au> (http://www.advanceparty.com)",
@@ -27,7 +27,6 @@
     "@frctl/fractal": "^1.1.7",
     "@frctl/mandelbrot": "^1.2.1",
     "@frctl/nunjucks": "^2.0.1",
-    "nunjucks": "^3.2.0",
-    "sassy-gridlover": "^6.0.5"
+    "nunjucks": "^3.2.0"
   }
 }
