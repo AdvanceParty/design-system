@@ -4,18 +4,17 @@
   "description": "Basic design system for Advance Party projects.",
   "main": "index.js",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "npm run build:styleguide && npm run watch",
-    "prod": "npm run clean && npm run build:styleguide && npm run copyfiles",
+    "start": "npm run build:styleguide && npm run watch",
+    "prod": "npm run clean && npm run build:styleguide && npm run package",
     "watch": " concurrently 'npm run watch:fractal' 'npm run watch:sass'",
     "watch:fractal": "fractal start --sync --watch",
     "watch:sass": "node-sass src/scss/ -wo src/static/css/",
     "build:styleguide": "npm run build:sass && npm run build:fractal",
     "build:sass": "node-sass src/scss/ -o src/static/css/",
     "build:fractal": "fractal build",
-    "copyfiles": "npm run copy:sass && npm run copy:css",
-    "copy:sass": "cp -R src/scss/ dist/scss",
-    "copy:css": "cp -R src/static/css/ dist/css",
+    "package": "npm run package:sass && npm run package:css",
+    "package:sass": "cp -R src/scss/ dist/scss",
+    "package:css": "postcss src/static/css/*.css -o dist/css/styles.css",
     "clean": "rm -rf src/static/css styleguide/ dist/*"
   },
   "keywords": [],
@@ -23,7 +22,10 @@
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "node-sass": "^4.12.0"
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.2",
+    "postcss-preset-env": "^6.6.0"
   },
   "dependencies": {
     "@frctl/fractal": "^1.1.7",

@@ -1,6 +1,6 @@
 context:
-  # title: Game of Clones
-  # subtitle: An Unreal World Experiment from Advance Party at The Royals
+  title: Game of Clones
+  subtitle: An Unreal World Experiment from Advance Party at The Royals
   sections:
     - section:
         - type: paragraph

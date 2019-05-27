@@ -8,7 +8,6 @@ body {
 
 @for $h-level from 1 through 6 {
   h#{$h-level} {
-    // @include text-level(nth($heading-sizes, $h-level));
     @include text-level(7 - $h-level);
     margin-bottom: v-space();
   }
@@ -32,10 +31,6 @@ blockquote {
 
 blockquote {
   @include indent(1);
-  @include min-width($scrn-md) {
-    @include indent(3);
-  }
-
   @include text-level(3);
   font-style: italic;
 }
@@ -43,11 +38,7 @@ blockquote {
 ol,
 ul {
   list-style-position: outside;
-
   @include indent(1);
-  @include min-width($scrn-md) {
-    @include indent(3);
-  }
 }
 
 ul {
@@ -56,10 +47,13 @@ ul {
 
 li {
   @include indent(1);
-  @include min-width($scrn-md) {
+}
+
+@include min-width($scrn-md) {
+  blockquote,
+  ol,
+  ul,
+  li {
     @include indent(3);
   }
-
-  margin-top: 0;
-  margin-bottom: 0;
 }

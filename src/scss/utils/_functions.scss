@@ -1,19 +1,17 @@
-/**
- * dynamically set z-index based on position 
- * in $z-indexes list
- * EG:  
- *  -- List --
- *    $z-indexes: (
- *      'modal',
- *      'site-nav'
- *    }
- *  -- usage --
- *    .modal { z-index: z(modal); }
- *    .site-nav { z-index: z(site-nav); }
- *  -- CSS Output --
- *    .modal { z-index: 2; }
-  *   .site-nav { z-index: 1; }
-  */
+// dynamically set z-index based on position
+// in $z-indexes list
+// EG:
+//  -- List --
+//    $z-indexes: (
+//      'modal',
+//      'site-nav'
+//    }
+//  -- usage --
+//    .modal { z-index: z(modal); }
+//    .site-nav { z-index: z(site-nav); }
+//  -- CSS Output --
+//    .modal { z-index: 2; }
+//   .site-nav { z-index: 1; }
 @function z($name, $z-indexes-list: $z-indexes) {
   @if index($z-indexes-list, $name) {
     @return (length($z-indexes-list) - index($z-indexes-list, $name)) + 1;
@@ -24,9 +22,7 @@
   }
 }
 
-/** 
- * Raise $number to the power of $exponent
- **/
+// Raise $number to the power of $exponent
 @function pow($number, $exponent) {
   $value: 1;
 
