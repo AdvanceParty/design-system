@@ -11,7 +11,7 @@ module.exports = {
     components: 'src/components',
     docs: 'src/docs',
     staticAssets: 'src/static',
-    build: 'dist/styleguide',
+    build: 'styleguide',
   },
   components: {
     defaultStatus: 'wip',

@@ -1,0 +1,65 @@
+html {
+  font-family: $font-stack-body;
+}
+
+body {
+  line-height: v-rhythm();
+}
+
+@for $h-level from 1 through 6 {
+  h#{$h-level} {
+    // @include text-level(nth($heading-sizes, $h-level));
+    @include text-level(7 - $h-level);
+    margin-bottom: v-space();
+  }
+}
+
+h5 {
+  font-weight: bold;
+}
+h6 {
+  font-style: italic;
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-bottom: v-space();
+}
+
+blockquote {
+  @include indent(1);
+  @include min-width($scrn-md) {
+    @include indent(3);
+  }
+
+  @include text-level(3);
+  font-style: italic;
+}
+
+ol,
+ul {
+  list-style-position: outside;
+
+  @include indent(1);
+  @include min-width($scrn-md) {
+    @include indent(3);
+  }
+}
+
+ul {
+  list-style: disc;
+}
+
+li {
+  @include indent(1);
+  @include min-width($scrn-md) {
+    @include indent(3);
+  }
+
+  margin-top: 0;
+  margin-bottom: 0;
+}

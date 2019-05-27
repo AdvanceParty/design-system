@@ -1,0 +1,48 @@
+/**
+ * dynamically set z-index based on position 
+ * in $z-indexes list
+ * EG:  
+ *  -- List --
+ *    $z-indexes: (
+ *      'modal',
+ *      'site-nav'
+ *    }
+ *  -- usage --
+ *    .modal { z-index: z(modal); }
+ *    .site-nav { z-index: z(site-nav); }
+ *  -- CSS Output --
+ *    .modal { z-index: 2; }
+  *   .site-nav { z-index: 1; }
+  */
+@function z($name, $z-indexes-list: $z-indexes) {
+  @if index($z-indexes-list, $name) {
+    @return (length($z-indexes-list) - index($z-indexes-list, $name)) + 1;
+  } @else {
+    @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes-list}';
+
+    @return null;
+  }
+}
+
+/** 
+ * Raise $number to the power of $exponent
+ **/
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+
+  @return $value;
+}
+
+@function v-rhythm() {
+  @return round(1rem * $root-line-height);
+}
+
+@function v-space($level: 1) {
+  @return v-rhythm() * $level;
+}
