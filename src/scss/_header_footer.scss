@@ -1,0 +1,14 @@
+body > header,
+body > footer {
+  padding: v-space(1) 0;
+  background-color: #efefef;
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+body > header {
+}
+
+body > footer {
+}

@@ -1,7 +1,13 @@
-body {
+main,
+body > header,
+footer {
   display: grid;
   grid-template-columns: minmax(10px, 1fr) minmax(300px, 750px) minmax(10px, 1fr);
   > * {
     grid-column-start: 2;
   }
+}
+
+main {
+  padding: v-space(2) 0 v-space(2);
 }

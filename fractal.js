@@ -20,7 +20,7 @@ fractal.docs.set('default.status', config.docs.defaultStatus);
 
 // components
 fractal.components.set('default.status', config.components.defaultStatus);
-
+fractal.components.set('default.preview', '@component');
 // Paths
 fractal.components.set('path', path.join(__dirname, config.paths.components));
 fractal.docs.set('path', path.join(__dirname, config.paths.docs));
