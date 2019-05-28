@@ -1,4 +1,7 @@
-const { MODIFIER_TYPES } = require('./constants');
+const MODIFIER_TYPES = {
+  DATA: 'data-type',
+  CLASS: 'class',
+};
 
 module.exports = {
   project: {
@@ -6,13 +9,17 @@ module.exports = {
     version: '1.0.0',
     author: 'advanceparty@theroyals.com.au',
   },
-  modifierType: MODIFIER_TYPES.DATA,
+  theme: {
+    themePath: 'advancePartyTheme',
+    loadPath: 'advancePartyTheme/views',
+  },
   paths: {
     components: 'src/components',
     docs: 'src/docs',
     staticAssets: 'src/static',
     build: 'styleguide',
   },
+  variantModifierType: MODIFIER_TYPES.DATA,
   components: {
     defaultStatus: 'wip',
   },
